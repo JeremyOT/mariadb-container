@@ -7,5 +7,5 @@ RUN sed -i -e's/^datadir\s*=.*/datadir = \/var\/mariadb\/data/' /etc/mysql/my.cn
 RUN sed -i -e 's/^bind-address.*=.*$/bind-address=0.0.0.0/' /etc/mysql/my.cnf
 COPY scripts /var/mariadb/scripts
 EXPOSE 3306
-VOLUME ["/var/mariadb/data", "/var/log/mysql", "/etc/mysql"]
+VOLUME ["/var/lib/mysql", "/var/log/mysql", "/etc/mysql"]
 ENTRYPOINT ["/var/mariadb/scripts/run.sh"]
