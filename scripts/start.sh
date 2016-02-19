@@ -4,7 +4,7 @@
 # Stop on error
 set -e
 
-DATA_DIR=/var/mariadb/data
+DATA_DIR=/var/lib/mysql
 
 pre_start_action() {
   # Cleanup previous sockets
