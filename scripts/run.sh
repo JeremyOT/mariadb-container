@@ -5,6 +5,10 @@ case $1 in
     mysql "${@:2}"
     ;;
   *)
+  mysqldump)
+    mysqldump "${@:2}"
+    ;;
+  *)
     /var/mariadb/scripts/start.sh
     ;;
 esac
